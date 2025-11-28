@@ -1,3 +1,4 @@
 {
-  "origins": ["https://yamr.cc", "http://localhost:4321"]
+  "origins": ["https://yamr.cc"],
+  "originsRegex": ["http://localhost:[0-9]+"]
 }
