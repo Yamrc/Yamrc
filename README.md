@@ -1,12 +1,13 @@
 `Yo~ yamrc 🎮✨ | Fujian🌏 | Game & Anime Trash | Ciallo～(∠・ω< )⌒★`
 
+[![Blog](https://img.shields.io/badge/blog-open-blue?style=for-the-badge&logo=rss&logoColor=%23fff&label=Blog)](https://yamr.cc)
 [![BiliBili](https://img.shields.io/badge/BiliBili-475403704-blue?style=for-the-badge&logo=bilibili&logoColor=%2300A1D6)](https://space.bilibili.com/475403704)
-[![Steam](https://img.shields.io/badge/Steam-yamrc-gray?style=for-the-badge&logo=steam&logoColor=%23ffffff)](https://steamcommunity.com/id/yamrc)
+[![Steam](https://img.shields.io/badge/Steam-yamrc-gray?style=for-the-badge&logo=steam&logoColor=%23fff)](https://steamcommunity.com/id/yamrc)
 [![wakatime](https://wakatime.com/badge/user/347b183a-e02e-464a-a180-ed2963969f84.svg?style=for-the-badge)](https://wakatime.com/@yamrc)
 
 ---
 
-<a href="https://coun.t.yamr.cc"><img src="https://coun.t.yamr.cc/@me?theme=rule34" height="100" align="right"></a>
+<a href="https://coun.t.yamr.cc"><img src="https://coun.t.yamr.cc/@me?theme=rule34" height="100" align="right" /></a>
 
 <picture>
   <source
