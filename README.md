@@ -1,6 +1,6 @@
 `Yo~ yamrc | Game & Anime Trash | Ciallo～(∠・ω< )⌒★`
 
-<a href="https://yamr.cc"><img src="https://img.shields.io/badge/blog-open-blue?style=for-the-badge&logo=rss&logoColor=%23fff&label=Blog" /></a>
+<a href="https://yamr.cc"><img src="https://img.shields.io/badge/blog-open-blue?style=for-the-badge&logo=rss&logoColor=%23fff" /></a>
 <a href="https://space.bilibili.com/475403704"><img src="https://img.shields.io/badge/BiliBili-475403704-blue?style=for-the-badge&logo=bilibili&logoColor=%2300A1D6" /></a>
 <a href="https://steamcommunity.com/id/yamrc"><img src="https://img.shields.io/badge/Steam-yamrc-gray?style=for-the-badge&logo=steam&logoColor=%23fff" /></a>
 <a href="https://wakatime.com/@yamrc"><img src="https://wakatime.com/badge/user/347b183a-e02e-464a-a180-ed2963969f84.svg?style=for-the-badge" /></a>
