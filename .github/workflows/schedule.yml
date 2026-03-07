@@ -14,7 +14,8 @@ jobs:
       - name: Install Packages & Update Gist
         working-directory: ./waka
         env:
-          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_ID_1: ${{ vars.GIST_ID_1 }}
+          GIST_ID_2: ${{ vars.GIST_ID_2 }}
           GH_PAT: ${{ secrets.GH_PAT }}
           WAKATIME_KEY: ${{ secrets.WAKATIME_KEY }}
         run: npm ci && node index.js
