@@ -21,22 +21,22 @@ const octo = new Octokit({ auth: `token ${GH_PAT}` });
 
     const best_day = data.best_day;
     const minus_holidays = data.days_minus_holidays;
-    const lines = `${data.human_additions} insertions(+) ${data.human_deletions} deletions(-)`
+    const lines = `${data.human_additions.toLocaleString('en-US')} insertions(+) ${data.human_deletions.toLocaleString('en-US')} deletions(-)`
 
     const profile = [
-      `Most Used language: ${language[0].name} (${language[0].text})`,
-      `Most Used IDE: ${ide[0].name} (${ide[0].text})`,
-      `Most Used OS: ${os[0].name} (${os[0].text})`,
+      `Most Used language: ${language[0].name} #${language[0].text}`,
+      `Most Used IDE: ${ide[0].name} #${ide[0].text}`,
+      `Most Used OS: ${os[0].name} #${os[0].text}`,
     ];
     const stat = [
-      `Best day: ${best_day.text} (${best_day.date})`,
+      `Best day: ${best_day.date} #${best_day.text}`,
       `Active days: ${minus_holidays}`,
       `Lines: ${lines}`
     ];
 
     await Promise.all([
-      updateGist(GIST_ID_1, `Total Time Coding ${total}`, "profile.yml", profile),
-      updateGist(GIST_ID_2, `Daily Average ${avg}`, "stat.yml", stat)
+      updateGist(GIST_ID_1, `Total Time Coding: ${total}`, "profile.yml", profile),
+      updateGist(GIST_ID_2, `Daily Average: ${avg}`, "stat.yml", stat)
     ]);
   } catch (error) { console.error(`Something went wrong:`, error.message); }
 })();
