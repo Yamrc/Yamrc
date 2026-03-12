@@ -6,7 +6,7 @@ if (!GIST_ID_1 || !GIST_ID_2 || !GH_PAT || !WAKATIME_KEY)
   throw new Error('Missing environment variables');
 
 const waka = new WakaClient(WAKATIME_KEY);
-const octo = new Octokit({ auth: `token ${GH_PAT}` });
+const octo = new Octokit({ auth: GH_PAT });
 
 (async () => {
   try {
