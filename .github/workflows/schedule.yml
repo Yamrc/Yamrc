@@ -7,11 +7,15 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: step::checkout
+        uses: actions/checkout@v4
+        
+      - name: step::setup_node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Install Packages & Update Gist
+          
+      - name: step::gist_update
         working-directory: ./waka
         env:
           GIST_ID_1: ${{ vars.GIST_ID_1 }}
@@ -19,3 +23,64 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
           WAKATIME_KEY: ${{ secrets.WAKATIME_KEY }}
         run: npm ci && node index.js
+
+      - name: step::dir_init
+        run: mkdir -p static
+          
+      - name: step::generate_git_stats
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&theme=default&bg_color=00000000&hide_border=true&custom_title=Github%20Stats
+          path: static/stat_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: step::generate_toplangs_stats
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&theme=default&bg_color=00000000&hide_border=true&custom_title=Top%20Languages&layout=compact
+          path: static/lang_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: step::generate_git_streak
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&theme=meta-light&background=00000000&hide_border=true
+          path: static/streak_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: step::generate_git_stats_dark
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&theme=blueberry&bg_color=00000000&hide_border=true&custom_title=Github%20Stats
+          path: static/stat_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: step::generate_toplangs_stats_dark
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&theme=blueberry&bg_color=00000000&hide_border=true&custom_title=Top%20Languages&layout=compact
+          path: static/lang_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: step::generate_git_streak_dark
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&theme=blueberry&background=00000000&hide_border=true
+          path: static/streak_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: step::commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/*.svg
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Chore: Update stats"
+            git push
+          fi
