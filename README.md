@@ -11,23 +11,23 @@
 
 <picture>
   <source
-    srcset="https://statsgi.t.yamr.cc/api?username=Yamrc&theme=blueberry&bg_color=00000000&hide_border=true&custom_title=Github%20Stats"
+    srcset="static/stat_dark.svg"
     media="(prefers-color-scheme: dark)"
   />
-  <img src="https://statsgi.t.yamr.cc/api?username=Yamrc&theme=default&bg_color=00000000&hide_border=true&custom_title=Github%20Stats" />
+  <img src="static/stat_light.svg" />
 </picture>
 
 <picture>
   <source
-    srcset="https://statsgi.t.yamr.cc/api/top-langs/?username=Yamrc&theme=blueberry&bg_color=00000000&hide_border=true&custom_title=Top%20Languages&layout=compact"
+    srcset="static/lang_dark.svg"
     media="(prefers-color-scheme: dark)"
   />
-  <img src="https://statsgi.t.yamr.cc/api/top-langs/?username=Yamrc&theme=default&bg_color=00000000&hide_border=true&custom_title=Top%20Languages&layout=compact" />
+  <img src="static/lang_light.svg" />
 </picture>
 <picture>
   <source
-    srcset="https://streakgi.t.yamr.cc?user=Yamrc&theme=blueberry&background=00000000&hide_border=true"
+    srcset="static/streak_dark.svg"
     media="(prefers-color-scheme: dark)"
   />
-  <img src="https://streakgi.t.yamr.cc?user=Yamrc&theme=meta-light&background=00000000&hide_border=true" />
+  <img src="static/streak_light.svg" />
 </picture>
