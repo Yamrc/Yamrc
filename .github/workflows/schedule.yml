@@ -28,7 +28,7 @@ jobs:
         run: mkdir -p static
           
       - name: step::generate_git_stats
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&theme=default&bg_color=00000000&hide_border=true&custom_title=Github%20Stats
@@ -36,7 +36,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: step::generate_toplangs_stats
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&theme=default&bg_color=00000000&hide_border=true&custom_title=Top%20Languages&layout=compact
@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: step::generate_git_stats_dark
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&theme=blueberry&bg_color=00000000&hide_border=true&custom_title=Github%20Stats
@@ -59,7 +59,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: step::generate_toplangs_stats_dark
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&theme=blueberry&bg_color=00000000&hide_border=true&custom_title=Top%20Languages&layout=compact
